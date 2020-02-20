@@ -1,0 +1,96 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <style>
+        ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        width: calc( 100% - 41px);
+        }
+        li {
+         width: calc(25% - 51px);
+         margin: 15px; 
+         padding: 10px; 
+         min-width: 350px;
+        }
+        img {
+        width : 200px;
+        padding: 10px;
+        }
+  
+    </style> -->
+    <title>The Book List</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>My Book List</h1>
+    <script>
+    var books = [
+        {title: '1984',
+         img: 'https://i.dr.com.tr/cache/500x400-0/originals/0000000064038-1.jpg',
+         author: 'George Orwell',
+         alreadyRead: false
+        },
+        {title: 'Oblomov',
+         img: 'https://images-na.ssl-images-amazon.com/images/I/51Z%2BLesz7PL._SX326_BO1,204,203,200_.jpg',
+         author: 'Ivan Goncharov',
+         alreadyRead: true
+        },
+        {title: 'Farm Animal',
+         img: 'https://images.wehkamp.nl/i/wehkamp/16378128_pb_01/animal-farm-graphic-novel-george-orwell-9789029539999.jpg?w=1024.jpg',
+         author: 'Gearge Orwell',
+         alreadyRead: false
+        },
+    ];
+    
+    var bookList = document.createElement('ul');
+    bookList.style.listStyle = 'none';
+    bookList.style.display = 'flex';
+    bookList.style.textAlign = 'center';
+    bookList.style.justifyContent = 'space-around';
+    body.appendChild(bookList);
+    
+    for (var i = 0; i < books.length; i++) {
+        var bookItem = document.createElement('li');
+        bookItem.style.width = '30%';
+        bookItem.style.height = '300px';
+        bookItem.style.padding = '10px';
+        bookList.appendChild(bookItem);
+
+
+        // var paragraph = document.createElement('p');
+        // paragraph.style.textAlign = "center";
+        // bookItem.appendChild(paragraph);
+
+        var bookDescription = document.createTextNode(books[i].title + ' by ' + books[i].author);
+        bookDescription.style.textAlign = 'center';
+        bookItem.appendChild(bookDescription);
+        
+        var bookImg = document.createElement('img');
+        bookImg.src = books[i].img;
+        bookItem.appendChild(bookImg);
+  
+        if (books[i].alreadyRead) {
+        bookItem.style.backgroundColor = 'green';
+        } else { 
+        bookItem.style.backgroundColor = 'red';
+        }
+        
+
+        bookImg.style.width = '175px';
+        bookImg.style.height = '175px';
+
+        paragraph.style.fontSize = '20px';
+
+        bookItem.style.width = '30%';
+        bookItem.style.height = '300px';
+        bookItem.style.padding = '10px';
+    }
+document.body.appendChild(bookList);
+     
+    </script>
+</body>
+</html> 
