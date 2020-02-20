@@ -3,25 +3,6 @@
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <style>
-        ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        width: calc( 100% - 41px);
-        }
-        li {
-         width: calc(25% - 51px);
-         margin: 15px; 
-         padding: 10px; 
-         min-width: 350px;
-        }
-        img {
-        width : 200px;
-        padding: 10px;
-        }
-  
-    </style> -->
     <title>The Book List</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -59,11 +40,6 @@
         bookItem.style.height = '300px';
         bookItem.style.padding = '10px';
         bookList.appendChild(bookItem);
-
-
-        // var paragraph = document.createElement('p');
-        // paragraph.style.textAlign = "center";
-        // bookItem.appendChild(paragraph);
 
         var bookDescription = document.createTextNode(books[i].title + ' by ' + books[i].author);
         bookDescription.style.textAlign = 'center';
